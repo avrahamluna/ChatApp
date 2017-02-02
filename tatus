@@ -1,0 +1,23 @@
+[33mcommit ebb645f86d72685a5dd95444b68183d57b222630[m
+Author: abmoon <avraham.luna@gmail.com>
+Date:   Wed Jan 18 22:02:45 2017 -0800
+
+    configuration and settings of CRUD functionality
+
+[33mcommit 44a6b948f6365071837ee59adc21742c6d5520be[m
+Author: abmoon <avraham.luna@gmail.com>
+Date:   Wed Jan 11 19:28:19 2017 -0800
+
+    parsed data from the request body
+
+[33mcommit 61b843cd555697532ff98f195af706ffbbbd10e2[m
+Author: abmoon <avraham.luna@gmail.com>
+Date:   Tue Jan 10 14:02:23 2017 -0800
+
+    added chat room view
+
+[33mcommit 1ac509a982427d67b0ca3ca1be7d27acb649d04c[m
+Author: abmoon <avraham.luna@gmail.com>
+Date:   Mon Jan 9 20:59:00 2017 -0800
+
+    set up JADE view engine
