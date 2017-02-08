@@ -29,28 +29,24 @@ module.exports = router;
 
 
     router.route('/rooms/edit/:id')
+        .all(function(req, res, next){
+            var roomId = req.params.id;
+
+            var room = _.find(rooms, r => r.id === roomId);
+            if (!room) {
+                res.sendStatus(404);
+                return;
+            }
+            res.locals.room = room
+            next()
+        })
         .get(function (req, res) {
-        var roomId = req.params.id;
-
-        var room = _.find(rooms, r => r.id === roomId);
-        if (!room) {
-            res.sendStatus(404);
-            return;
-        }
-
-        res.render("edit", {room});
+            res.render("edit");
 
     })
 
        .post(function (req, res) {
-        var roomId = req.params.id;
-
-        var room = _.find(rooms, r => r.id === roomId);
-        if(!room){
-            res.sendStatus(404);
-        }
-
-        room.name = req.body.name;
+        res.locals.room.name = req.body.name;
 
         res.redirect(req.baseUrl + "/rooms");
 
